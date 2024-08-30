@@ -1,0 +1,6 @@
+aiohttp==3.10.5
+
+fastapi==0.112.2
+pydantic==2.8.2
+PyYAML==6.0.2
+uvicorn==0.30.6
