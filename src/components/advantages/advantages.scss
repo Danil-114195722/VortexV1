@@ -1,0 +1,36 @@
+@import '../../assets/mixins';
+
+.advantages{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 80px;
+	&__row-one, &__row-two{
+		display: flex;
+		justify-content: center;
+		gap: 120px;
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		flex-wrap: wrap;
+		.advantages__item{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 30px;
+			img{
+				width: 80px;
+			}
+			&-desk{
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+				align-items: center;
+				text-align: center;
+			}
+		}
+	}
+	@include paddings()
+}
