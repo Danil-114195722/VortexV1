@@ -1,0 +1,41 @@
+.feedback{
+	position: relative;
+	padding-left: 200px;
+	padding-right: 200px;
+	padding-bottom: 125px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 80px;
+	&-bg1{
+		position: absolute;
+		z-index: -1;
+		left: 370px;
+		top: 100px;
+		width: 200px;
+	}
+	&-bg2{
+		position: absolute;
+		z-index: -1;
+		width: 150px;
+		top: 400px;
+		right: 400px;
+	}
+	&__window{
+		backdrop-filter: blur(10px);
+		background: rgba(237, 237, 237, 0.1);
+		border: 1px solid black;
+		border-radius: 15px;
+		padding: 80px 160px 80px 160px;
+		display: flex;
+		form{
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			input[type='submit']{
+				margin-top: 5px;
+				width: 240px;
+			}
+		}
+	}
+}
