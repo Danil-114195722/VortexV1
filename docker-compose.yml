@@ -40,9 +40,9 @@ services:
       dockerfile: DockerfileNginx
     container_name: vortex_nginx_front
     restart: always
-    volumes:
-      - certbot_www:/var/www/certbot/:ro
-      - certbot_conf:/etc/nginx/ssl/:ro
+#    volumes:
+#      - certbot_www:/var/www/certbot/:ro
+#      - certbot_conf:/etc/nginx/ssl/:ro
     ports:
       - "80:80"
       - "443:443"
@@ -61,6 +61,6 @@ networks:
         - subnet: 172.15.1.0/24
 
 
-volumes:
-  certbot_www:
-  certbot_conf:
+#volumes:
+#  certbot_www:
+#  certbot_conf:
