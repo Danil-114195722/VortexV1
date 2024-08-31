@@ -7,7 +7,7 @@ from fastapi.responses import JSONResponse
 from yaml import safe_load as yaml_safe_load
 
 from services.post_models import PostForm
-from services.send_mail import send_mail
+from services.send_mail import async_send_mail
 from settings.settings import BASEDIR
 
 
@@ -44,14 +44,14 @@ async def send_mail_resource(body: PostForm):
     text = f"""Новая заявка с сайта.\n
 Имя: {body.name}
 Номер телефона: {body.phone}
-Услуга: {body.service}
+Услуга: {body.service}\n
 Сообщение:
 {body.message}\n
 Дата и время подачи заявки: {datetime.strftime(datetime.now(), "%d.%m.%Y, %H:%M:%S")}.
 """
 
     # отправка письма
-    is_ok = send_mail(subject="Новая заявка с сайта!", text=text)
+    is_ok = await async_send_mail(subject="Новая заявка с сайта!", text=text)
 
     if is_ok:
         return {"status": "ok"}
