@@ -1,13 +1,6 @@
-@mixin paddings() {
-	padding-left: 200px;
-	padding-right: 200px;
-	padding-top: 125px;
-	padding-bottom: 125px;
-}
-
 @mixin navigation__left() {
 	display: flex;
-	gap: 50px;
+	gap: 40px;
 	align-items: center;
 	img{
 		width: 70px;
@@ -17,6 +10,6 @@
 
 @mixin navigation__nav() {
 	display: flex;
-	gap: 30px;
+	gap: 20px;
 	cursor: pointer;
 }

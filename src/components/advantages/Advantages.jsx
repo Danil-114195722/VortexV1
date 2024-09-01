@@ -9,21 +9,21 @@ const Advantages = () => {
 						<img src="../../../public/dopysl.svg" alt="" />
 						<div className="advantages__item-desk">
 							<h4>Дополнительные услуги</h4>
-							<p>Предлагаем сертификацию и <br /> таможенное оформление</p>
+							<p>Предлагаем сертификацию и таможенное оформление</p>
 						</div>
 					</div>
 					<div className="advantages__item">
 						<img src="../../../public/kompleks.svg" alt="" />
 						<div className="advantages__item-desk">
 							<h4>Комплексный подход</h4>
-							<p>Полный комплекс услуг по <br /> обработке грузов разного вида <br /> сложности</p>
+							<p>Полный комплекс услуг по обработке грузов разного вида сложности</p>
 						</div>
 					</div>
 					<div className="advantages__item">
 						<img src="../../../public/individ.svg" alt="" />
 						<div className="advantages__item-desk">
 							<h4>Индивидуальный подход</h4>
-							<p>Разрабатываем маршруты под <br /> конкретный проект с учетом <br /> имеющихся особенностей</p>
+							<p>Разрабатываем маршруты под конкретный проект с учетом имеющихся особенностей</p>
 						</div>
 					</div>
 				</div>
@@ -32,14 +32,14 @@ const Advantages = () => {
 						<img src="../../../public/oplata.svg" alt="" />
 						<div className="advantages__item-desk">
 							<h4>Оплата за товар и услуги</h4>
-							<p>возможность валютной оплаты <br /> за товар</p>
+							<p>возможность валютной оплаты за товар</p>
 						</div>
 					</div>
 					<div className="advantages__item">
 						<img src="../../../public/otkrit.svg" alt="" />
 						<div className="advantages__item-desk">
 							<h4>Открытость к диалогу</h4>
-							<p>Будем рады ответить на <br /> вопросы, посчитать конкретные <br /> запросы</p>
+							<p>Будем рады ответить на вопросы, посчитать конкретные запросы</p>
 						</div>
 					</div>
 				</div>

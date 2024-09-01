@@ -18,14 +18,19 @@
 		.footer__contacts{
 			display: flex;
 			align-items: center;
-			gap: 30px;
+			gap: 20px;
 			p{
 				color: white;
+				cursor: pointer;
 			}
 		}
 		.footer__media{
 			display: flex;
-			gap: 30px;
+			gap: 20px;
+			img{
+				width: 25px;
+				cursor: pointer;
+			}
 		}
 	}
 }
