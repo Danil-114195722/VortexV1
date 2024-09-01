@@ -9,16 +9,12 @@
 	padding-right: 180px;
 	padding-top: 125px;
 	padding-bottom: 125px;
-	&__row-one, &__row-two{
-		display: flex;
-		justify-content: center;
-		gap: 120px;
-	}
 	&__list{
 		display: flex;
-		flex-direction: column;
 		gap: 40px;
 		flex-wrap: wrap;
+		justify-content: center;
+		width: 90%;
 		.advantages__item{
 			display: flex;
 			flex-direction: column;
