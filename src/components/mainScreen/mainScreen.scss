@@ -1,3 +1,5 @@
+@import '../../assets/mixins';
+
 .main{
 	z-index: 1;
 	position: relative;
@@ -31,18 +33,10 @@
 		display: flex;
 		justify-content: space-between;
 		&__left{
-			display: flex;
-			gap: 50px;
-			align-items: center;
-			img{
-				width: 70px;
-				cursor: pointer;
-			}
 			.header__nav{
-				display: flex;
-				gap: 30px;
-				cursor: pointer;
+				@include navigation__nav()
 			}
+			@include navigation__left()
 		}
 		&__right{
 			display: flex;

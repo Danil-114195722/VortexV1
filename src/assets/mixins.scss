@@ -4,3 +4,19 @@
 	padding-top: 125px;
 	padding-bottom: 125px;
 }
+
+@mixin navigation__left() {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	img{
+		width: 70px;
+		cursor: pointer;
+	}
+}
+
+@mixin navigation__nav() {
+	display: flex;
+	gap: 30px;
+	cursor: pointer;
+}

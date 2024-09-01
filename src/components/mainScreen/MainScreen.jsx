@@ -5,7 +5,7 @@ const MainScreen = () => {
 		<div className="main">
 			<header className="header">
 				<div className="header__left">
-					<img src="../../../public/logo.png" alt="Vortex" />
+					<img src="../../../public/logo.svg" alt="Vortex" />
 					<div className="header__nav">
 						<p>Услуги</p>
 						<p>Направления</p>

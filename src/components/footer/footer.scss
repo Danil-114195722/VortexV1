@@ -1,0 +1,31 @@
+@import '../../assets/mixins';
+
+.footer{
+	padding: 80px 200px 80px 200px;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__left{
+		.footer__nav{
+			@include navigation__nav()
+		}
+		@include navigation__left()
+	}
+	&__right{
+		display: flex;
+		gap: 40px;
+		.footer__contacts{
+			display: flex;
+			align-items: center;
+			gap: 30px;
+			p{
+				color: white;
+			}
+		}
+		.footer__media{
+			display: flex;
+			gap: 30px;
+		}
+	}
+}
