@@ -1,7 +1,8 @@
 import smtplib
 import aiosmtplib
 
-from settings.settings import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST, logger
+from settings.settings import logger
+from settings.config import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST
 
 
 # Асинхронная отправка письма

@@ -69,3 +69,6 @@ venv.bak/
 
 # PyCharm
 /.idea/
+
+# Config file
+./settings/config.py
