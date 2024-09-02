@@ -40,10 +40,3 @@ async def send_mail_resource(body: PostForm):
         return {"status": "ok"}
     else:
         return JSONResponse(content={"status": "error"}, status_code=500)
-
-
-if __name__ == '__main__':
-    import uvicorn
-
-    # запуск бэка через uvicorn
-    uvicorn.run("main:app", reload=True, log_level="debug")
