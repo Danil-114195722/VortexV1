@@ -1,11 +1,14 @@
 import './feedback.scss'
 
 const Feedback = () => {
+	const a = e => {
+		e.preventDefault()
+	}
 	return (
 		<div className="feedback element-animation" id='feedback'>
 			<h2 className="feedback-title">Обратная <span>свзяь</span></h2>
-			<div className="feedback__window">
-				<form action="">
+			<div className="feedback__window scale-anim">
+				<form action="" onSubmit={(e) => a(e)}>
 					<input type="text" placeholder='Ваше имя'/>
 					<input type="number" placeholder='Ваш номер'/>
 					<select name="serviceList" id="serviceList">

@@ -7,10 +7,10 @@ const MainScreen = () => {
 				<div className="header__left">
 					<a href="#main"><img src="../../../public/logo.svg" alt="Vortex" /></a>
 					<div className="header__nav">
-						<a href='#services'>Услуги</a>
-						<a href='#directions'>Направления</a>
-						<a href='#advantages'>Преимущества</a>
-						<a href='#feedback'>Обратная связь</a>
+						<a href='#services' className='link'>Услуги</a>
+						<a href='#directions' className='link'>Направления</a>
+						<a href='#advantages' className='link'>Преимущества</a>
+						<a href='#feedback' className='link'>Обратная связь</a>
 					</div>
 				</div>
 				<div className="header__right">
@@ -24,7 +24,7 @@ const MainScreen = () => {
 							<li><a href="#directions" className="menu-item">Направления</a></li>
 							<li><a href="#advantages" className="menu-item">Преимущества</a></li>
 							<li><a href="#feedback" className="menu-item">Обратная связь</a></li>
-							<li><a href='' className="menu-item">+7 921 925 65 13</a></li>
+							<li><a href="tel:+79219256513" className="menu-item">+7 921 925 65 13</a></li>
 							<li><input type="button" value='Оставить заявку'/></li>
 						</ul>
 					</div>

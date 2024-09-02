@@ -17,6 +17,45 @@ body, html{
 	transition: all 0.5s;
 	transform: translateX(0%);
 }
+.svg:hover{
+  path{
+		fill: #005DFF;
+	}
+}
+.svg-tg:hover{
+	path{
+		stroke: #005DFF;
+	}
+}
+@media (min-width: 1200px) {
+	.scale-anim{
+		transition: 0.5s ease;
+	}
+	.scale-anim:hover{
+		transform: translate(0%, 1%);
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}
+.link {
+  position: relative;
+}
+.link::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  display: block;
+  height: 1px;
+  background: #005DFF;
+	width: 0;
+  transition: 0.3s;
+}
+.link:hover:after {
+  width: 100%;
+}
+.link:hover{
+	color: #005DFF;
+}
 ::-webkit-scrollbar {
 	width: 4px; 
 	height: 8px;
@@ -27,7 +66,10 @@ body, html{
 background-color: white;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #ffca0e;
+	background-color: #005DFF;
+}
+textarea::-webkit-scrollbar {
+	display: none;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -82,6 +124,12 @@ input[type='button'], input[type='submit']{
 	border: none;
 	font-weight: 300;
 	cursor: pointer;
+}
+input[type='button']:hover, input[type='submit']:hover{
+	background-color: #2374ff;
+}
+input[type='submit']:active{
+	background-color: #0040b0;
 }
 input[type='text'], input[type='number']{
 	border-top: none;
