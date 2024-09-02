@@ -18,13 +18,13 @@ http://api.vortex.spb.su/send_mail/
 ```json5
 {
   // Имя клиента
-  name: "string",
+  "name": "string",
   // Телефон клиента
-  phone: "string",
+  "phone": "string",
   // Название услуги
-  service: "string",
+  "service": "string",
   // Сообщение
-  message: "string"
+  "message": "string"
 }
 ```
 
