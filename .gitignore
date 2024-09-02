@@ -71,4 +71,4 @@ venv.bak/
 /.idea/
 
 # Config file
-./settings/config.py
+/settings/config.py
