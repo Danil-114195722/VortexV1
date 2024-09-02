@@ -2,7 +2,7 @@ import './directions.scss'
 
 const Directions = () => {
 	return (
-		<div className="directions">
+		<div className="directions element-animation" id='directions'>
 			<h2 className="directions-title">Ключевые <span>направления</span></h2>
 			<div className="directions__list">
 				<div className="directions__item">

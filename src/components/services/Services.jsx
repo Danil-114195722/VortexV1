@@ -2,10 +2,10 @@ import './services.scss'
 
 const Services = () => {
 	return (
-		<div className="services">
+		<div className="services" id='services'>
 			<h2 className="services-title">Способы <span>перевозок</span></h2>
 			<div className="services__list">
-				<div className="services__item">
+				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>
 						<div className="services__item-content">
 							<div className='services__item-img track'></div>
@@ -31,7 +31,7 @@ const Services = () => {
 							</div>
 						</div>
 				</div>
-				<div className="services__item">
+				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>
 						<div className="services__item-content">
 							<div className='services__item-img ship'></div>
@@ -57,7 +57,7 @@ const Services = () => {
 							</div>
 						</div>
 				</div>
-				<div className="services__item">
+				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>
 						<div className="services__item-content">
 							<div className='services__item-img train'></div>
@@ -83,7 +83,7 @@ const Services = () => {
 							</div>
 						</div>
 				</div>
-				<div className="services__item">
+				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>
 						<div className="services__item-content">
 							<div className='services__item-img avia'></div>
@@ -109,7 +109,7 @@ const Services = () => {
 							</div>
 						</div>
 				</div>
-				<div className="services__item">
+				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>
 						<div className="services__item-content">
 							<div className='services__item-img multi'></div>

@@ -2,7 +2,7 @@ import './feedback.scss'
 
 const Feedback = () => {
 	return (
-		<div className="feedback">
+		<div className="feedback element-animation" id='feedback'>
 			<h2 className="feedback-title">Обратная <span>свзяь</span></h2>
 			<div className="feedback__window">
 				<form action="">

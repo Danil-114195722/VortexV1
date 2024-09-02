@@ -1,7 +1,7 @@
 import './advantages.scss'
 const Advantages = () => {
 	return (
-		<div className="advantages">
+		<div className="advantages element-animation" id='advantages'>
 			<h2 className="advantages-title">Наши <span>преимущества</span></h2>
 			<div className="advantages__list">
 				<div className="advantages__item">
