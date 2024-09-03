@@ -5,5 +5,5 @@ from pydantic import BaseModel
 class PostForm(BaseModel):
     name: str
     phone: str
-    service: str
-    message: str
+    service: str | None = None
+    message: str | None = None
