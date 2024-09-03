@@ -5,8 +5,8 @@ from settings.settings import logger
 from settings.config import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST
 
 
-# Асинхронная отправка письма
-async def async_send_mail(subject: str, text: str) -> bool:
+# Асинхронная отправка письма через google
+async def async_send_mail_google(subject: str, text: str) -> bool:
     mail_body = "\n".join((f"From: {MAIL_FROM}",
                            f"To: {', '.join(MAIL_TO_LIST)}",
                            f"Subject: {subject}",
@@ -38,8 +38,8 @@ async def async_send_mail(subject: str, text: str) -> bool:
         await server.quit()
 
 
-# Отправка письма
-async def send_mail(subject: str, text: str) -> bool:
+# Отправка письма через google
+def send_mail_google(subject: str, text: str) -> bool:
     mail_body = "\n".join((f"From: {MAIL_FROM}",
                            f"To: {', '.join(MAIL_TO_LIST)}",
                            f"Subject: {subject}",
@@ -62,6 +62,38 @@ async def send_mail(subject: str, text: str) -> bool:
 
     finally:
         server.quit()
+
+
+# Асинхронная отправка письма через свой сервер
+async def async_send_mail_vortex(subject: str, text: str) -> bool:
+    mail_body = "\n".join((f"From: {MAIL_FROM}",
+                           f"To: {', '.join(MAIL_TO_LIST)}",
+                           f"Subject: {subject}",
+                           f"{text}"))
+
+    logger.info("Start send mail...")
+    mail_body = mail_body.encode()  # для русских букв
+
+    server = aiosmtplib.SMTP(
+        username=MAIL_FROM,
+        password=MAIL_PASSWORD,
+        hostname="smtp.spaceweb.ru",
+        port=25,
+        timeout=5.0,
+    )
+    try:
+        await server.connect()
+        await server.sendmail(MAIL_FROM, MAIL_TO_LIST, mail_body)
+
+        logger.info("Mail sent successfully!")
+        return True
+
+    except Exception as error:
+        logger.critical(f'Sending mail failed: "{error}"')
+        return False
+
+    finally:
+        await server.quit()
 
 
 # if __name__ == '__main__':
