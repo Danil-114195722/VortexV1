@@ -4,7 +4,7 @@ from .post_models import PostForm
 
 
 def format_mail(body: PostForm) -> str:
-    email_part = f"Почта:\n{body.email}\n\n" if body.email else ""
+    email_part = f"Почта: {body.email}\n" if body.email else ""
 
     # перевод названия услуги из условного в полное
     match body.service:
