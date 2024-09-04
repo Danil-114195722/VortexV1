@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './feedback.scss'
 import Modal from '../modal/Modal'
 import { createGlobalStyle } from 'styled-components'
+import axios from 'axios'
 
 const GlobalStyles = createGlobalStyle`
 		body, html{
@@ -33,26 +34,38 @@ const Feedback = () => {
 			alert('Укажите правильный номер телефона')
 		}
 	}
-	const a = e => {
+
+	const a  = async e => {
 		const formData = {
 			name: e.target.name.value,
 			phone: e.target.phone.value,
 			email: e.target.email.value,
-			sevice: e.target.serviceList.value,
+			service: e.target.serviceList.value,
 			message: e.target.message.value
 		}
-		if(formData.sevice === 'a'){
-			formData.sevice = null
-		}
-		if(formData.message === ''){
-			formData.message = null
-		}
-		if(formData.email === ''){
-			formData.email = null
-		}
-		console.log(formData)
-		setIsAccess(true)
+
+		Object.keys(formData).forEach(key => {
+				if (formData[key] === '' || formData[key] === 'a') {
+					formData[key] = null;
+				}
+		})
+
+		axios.post('http://api.vortex.spb.su/send_mail/', formData)
+		.then(() => {
+			setIsAccess(true)
+		})
+		.catch(error => {
+			console.error('Ошибка при отправке запроса', error)
+			alert('Ошибка при отправке запроса, попробуйте отправить заявку позже или свяжитесь с нами напрямую')
+		})
+
+		e.target[0].value = ''
+		e.target[1].value = ''
+		e.target[2].value = ''
+		e.target[3].value = 'a'
+		e.target[4].value = ''
 	}
+
 	return (
 		<>
 		{isAccess && (
