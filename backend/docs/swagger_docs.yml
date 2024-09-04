@@ -9,7 +9,7 @@ info:
 
 servers:
   - description: Production server
-    url: http://i.p.v.4/api
+    url: http://api.vortex.spb.su/send_mail
   - description: Development server
     url: http://127.0.0.1:8000/api
 
@@ -33,6 +33,9 @@ paths:
                 phone:
                   type: string
                   example: "89054764513"
+                email:
+                  type: string
+                  example: "sample@sample.com"
                 service:
                   type: string
                   example: "Какая-то услуга"
@@ -42,8 +45,6 @@ paths:
               required:
                 - name
                 - phone
-                - service
-                - message
       responses:
         '200':
           description: Successful Response
