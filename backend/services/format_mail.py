@@ -4,6 +4,8 @@ from .post_models import PostForm
 
 
 def format_mail(body: PostForm) -> str:
+    email_part = f"Почта:\n{body.email}\n\n" if body.email else ""
+
     # перевод названия услуги из условного в полное
     match body.service:
         case "log":
@@ -23,6 +25,7 @@ def format_mail(body: PostForm) -> str:
     text = f"""Новая заявка с сайта.\n
 Имя: {body.name}
 Номер телефона: {body.phone}
+{email_part}
 {service_title}
 {message_part}
 Дата и время подачи заявки: {datetime.strftime(datetime.now(), "%d.%m.%Y, %H:%M:%S")}."""
