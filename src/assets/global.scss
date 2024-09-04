@@ -3,7 +3,6 @@
 body, html{
 	font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
 	scroll-behavior: smooth;
 	overflow-x: hidden;
@@ -131,7 +130,7 @@ input[type='button']:hover, input[type='submit']:hover{
 input[type='submit']:active{
 	background-color: #0040b0;
 }
-input[type='text'], input[type='number']{
+input[type='text'], input[type='number'], input[type='email']{
 	border-top: none;
 	border-left: none;
 	border-right: none;
@@ -270,6 +269,9 @@ textarea{
 	}
 	.feedback-bg2{
 		right: 1vw;
+	}
+	.modal{
+		width: 80vw;
 	}
 }
 @media (max-width: 640px) {

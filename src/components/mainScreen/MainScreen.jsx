@@ -2,7 +2,7 @@ import './mainScreen.scss'
 
 const MainScreen = () => {
 	return (
-		<div className="main">
+		<div className="main" id='main'>
 			<header className="header">
 				<div className="header__left">
 					<a href="#main"><img src="../../../public/logo.svg" alt="Vortex" /></a>
@@ -14,7 +14,7 @@ const MainScreen = () => {
 					</div>
 				</div>
 				<div className="header__right">
-					<a href="tel:+79219256513"><h5>+7 921 925 65 13</h5></a>
+					<a href="tel:+79219256513"><h5 className='link'>+7 921 925 65 13</h5></a>
 					<a href="#feedback"><input type="button" value='Оставить заявку'/></a>
 					<div className="menu">
 						<input type="checkbox" id='burger-checkbox' className='burger-checkbox' />
