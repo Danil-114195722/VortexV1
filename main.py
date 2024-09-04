@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from services.post_models import PostForm
 from services.format_mail import format_mail
@@ -7,6 +8,15 @@ from services.send_mail import async_send_mail_vortex
 
 
 app = FastAPI(openapi_url=None, docs_url=None, redoc_url=None)
+
+# middleware с добавлением заголовков для CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://vortex.spb.su", "https://vortex.spb.su"],
+    allow_credentials=False,
+    allow_methods=["POST"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
