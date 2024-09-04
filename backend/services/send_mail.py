@@ -1,7 +1,9 @@
+import ssl
 import smtplib
 import aiosmtplib
 
-from settings.settings import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST, logger
+from settings.settings import logger
+from settings.config import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST
 
 
 # Асинхронная отправка письма через google
@@ -73,13 +75,19 @@ async def async_send_mail_vortex(subject: str, text: str) -> bool:
     logger.info("Start send mail...")
     mail_body = mail_body.encode()  # для русских букв
 
+    ctx = ssl.create_default_context()
+    ctx.set_ciphers('DEFAULT')
+
     server = aiosmtplib.SMTP(
         username=MAIL_FROM,
         password=MAIL_PASSWORD,
         hostname="smtp.spaceweb.ru",
-        port=25,
-        timeout=5.0,
+        port=587,
+        timeout=10.0,
+        start_tls=True,
+        tls_context=ctx
     )
+
     try:
         await server.connect()
         await server.sendmail(MAIL_FROM, MAIL_TO_LIST, mail_body)
