@@ -3,6 +3,7 @@ import argparse
 import uvicorn
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from yaml import safe_load as yaml_safe_load
 
 from services.post_models import PostForm
@@ -30,6 +31,15 @@ else:
         custom_openapi = yaml_safe_load(yaml_swagger_docs)
         # Заменяем стандартную OpenAPI схему на свою
         api_app.openapi = lambda: custom_openapi
+
+# middleware с добавлением заголовков для CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://vortex.spb.su", "https://vortex.spb.su"],
+    allow_credentials=False,
+    allow_methods=["POST"],
+    allow_headers=["*"],
+)
 
 
 @api_app.post("/send_mail")
