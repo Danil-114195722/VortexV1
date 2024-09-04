@@ -21,6 +21,8 @@ http://api.vortex.spb.su/send_mail/
   "name": "string",
   // Телефон клиента
   "phone": "string",
+  // Почта клиента
+  "email": "string",
   // Название услуги
   "service": "string",
   // Сообщение
