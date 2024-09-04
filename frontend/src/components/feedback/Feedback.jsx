@@ -35,7 +35,7 @@ const Feedback = () => {
 		}
 	}
 
-	const a  = async e => {
+	const a  = e => {
 		const formData = {
 			name: e.target.name.value,
 			phone: e.target.phone.value,
