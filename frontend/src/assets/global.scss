@@ -134,6 +134,7 @@ input[type='text'], input[type='number'], input[type='email']{
 	border-top: none;
 	border-left: none;
 	border-right: none;
+	border-radius: 0;
 	padding-bottom: 5px;
 	font-family: 'Raleway', sans-serif;
 	font-size: 13px;
@@ -148,15 +149,22 @@ select{
 	border-radius: 15px;
 	height: 40px;
 	text-align: center;
+	border: 1px solid #696969;
 	font-family: 'Raleway', sans-serif;
+	background-color: white;
 	outline: none;
+	text-align-last: center;
+	color:#696969;
+	text-align-last: c; 
 }
 textarea{
 	padding: 15px 20px 0 15px;
 	border-radius: 15px;
 	height: 105px;
 	resize: none;
+	border: 1px solid #696969;
 	color: #000000;
+	background-color: white;
 	font-size: 13px;
 	font-family: 'Raleway', sans-serif;
 	outline: none;
@@ -366,33 +374,35 @@ textarea{
 		width: 310px;
 	}
 }
+@media (max-width:450px){
+	.main .entry__subtitle img{
+		width: 230px;
+}
+	.services__item-content{
+		width: 260px;
+		width: 100%;
+	}
+	// .services__item-hrline{
+	// 	width: 315px;
+	// }
+	.services__item{
+		width: 315px;
+	}
+	.services__list{
+		align-items: center;
+	}
+}
 @media (max-width: 400px) {
 	.feedback__window{
 		padding: 80px 20px 80px 20px;
-	}
-	.services__item-content .services__desc{
-		width: 100%;
 	}
 }
 @media (max-width: 390px) {
 	h1{
 		font-size: 30px;
 	}
-	.main .entry__subtitle img{
-		width: 250px;
-	}
 	.services__item .track{
 		height: 120px;
-	}
-	.services__item-content .services__desc .services__graphics img{
-		width: 260px;
-	}
-	.services__item-img{
-		width: 260px;
-	}
-	.services__item-hrline{
-		width: 260px;
-		margin: 0 auto;
 	}
 }
 @media (max-width: 350px){
@@ -402,17 +412,17 @@ textarea{
 	}
 }
 
-@media (max-height: 666px) {
+@media (max-height: 666px)  and (min-width: 600px){
 	.main .entry__subtitle img{
 		width: 300px;
 	}
 }
-@media (max-height: 610px){
+@media (max-height: 610px) and (min-width: 600px){
 	.main .entry__subtitle img{
 		width: 250px;
 	}
 }
-@media (max-height: 580px){
+@media (max-height: 580px) and (min-width: 600px){
 	.main .entry__subtitle img{
 		width: 200px;
 	}
@@ -423,12 +433,12 @@ textarea{
 	}
 }
 
-@media (max-height: 550px) and (min-width: 550px) {
+@media (max-height: 550px){
 	.main .entry__subtitle img{
 		width: 150px;
 	}
 }
-@media (max-height: 517px) and (min-width: 550px) {
+@media (max-height: 517px){
 	.main .entry__subtitle img{
 		display: none;
 	}

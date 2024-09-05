@@ -3,7 +3,7 @@ import './services.scss'
 const Services = () => {
 	return (
 		<div className="services" id='services'>
-			<h2 className="services-title">Способы <span>перевозок</span></h2>
+			<h2 className="services-title element-animation">Способы <span>перевозок</span></h2>
 			<div className="services__list">
 				<div className="services__item element-animation">
 						<div className="services__item-hrline"></div>

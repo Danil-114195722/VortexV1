@@ -20,6 +20,7 @@ const MainScreen = () => {
 						<input type="checkbox" id='burger-checkbox' className='burger-checkbox' />
 						<label htmlFor="burger-checkbox" className='burger'></label>
 						<ul className='menu-list'>
+							<li><a href="#main" className="menu-item">Главная</a></li>
 							<li><a href="#services" className="menu-item">Услуги</a></li>
 							<li><a href="#directions" className="menu-item">Направления</a></li>
 							<li><a href="#advantages" className="menu-item">Преимущества</a></li>
