@@ -382,9 +382,6 @@ textarea{
 		width: 260px;
 		width: 100%;
 	}
-	// .services__item-hrline{
-	// 	width: 315px;
-	// }
 	.services__item{
 		width: 315px;
 	}
@@ -408,6 +405,12 @@ textarea{
 @media (max-width: 350px){
 	.directions, .feedback, .footer, .main, .services, .advantages{
 		padding-left: 0;
+		padding-right: 0;
+	}
+	.burger{
+		right: 0;
+	}
+	.menu-list{
 		padding-right: 0;
 	}
 }
