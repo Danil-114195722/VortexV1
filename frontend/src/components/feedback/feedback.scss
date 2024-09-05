@@ -22,8 +22,9 @@
 		right: 400px;
 	}
 	&__window{
-		backdrop-filter: blur(10px);
 		background: rgba(237, 237, 237, 0.1);
+		-webkit-backdrop-filter: blur(10px);
+		backdrop-filter: blur(10px);
 		border: 1px solid black;
 		border-radius: 15px;
 		padding: 80px 160px 80px 160px;

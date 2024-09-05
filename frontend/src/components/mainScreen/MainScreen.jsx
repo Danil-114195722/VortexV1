@@ -20,12 +20,12 @@ const MainScreen = () => {
 						<input type="checkbox" id='burger-checkbox' className='burger-checkbox' />
 						<label htmlFor="burger-checkbox" className='burger'></label>
 						<ul className='menu-list'>
-							<li><a href="#main" className="menu-item">Главная</a></li>
-							<li><a href="#services" className="menu-item">Услуги</a></li>
-							<li><a href="#directions" className="menu-item">Направления</a></li>
-							<li><a href="#advantages" className="menu-item">Преимущества</a></li>
-							<li><a href="#feedback" className="menu-item">Обратная связь</a></li>
-							<li className='last-menu-item'><a href="tel:+79219256513" className="menu-item">+7 921 925 65 13</a></li>
+							<a href="#main"><li className='menu-item'>Главная</li></a>
+							<a href="#services"><li className='menu-item'>Услуги</li></a>
+							<a href="#directions"><li className='menu-item'>Направления</li></a>
+							<a href="#advantages"><li className='menu-item'>Преимущества</li></a>
+							<a href="#feedback"><li className='menu-item'>Обратная связь</li></a>
+							<a href="tel:+79219256513" ><li className='menu-item last-menu-item'>+7 921 925 65 13</li></a>
 						</ul>
 					</div>
 				</div>
