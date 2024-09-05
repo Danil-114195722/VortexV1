@@ -91,8 +91,8 @@ const Feedback = () => {
 					<input type="submit" value='Оставить заявку'/>
 				</form>
 			</div>
-			<img className='feedback-bg1' src="../../../public/bg_triangle4.png" alt="" />
-			<img className='feedback-bg2' src="../../../public/bg_triangle5.png" alt="" />
+			<img className='feedback-bg1' src="../../../public/bg_triangle4.webp" alt="" />
+			<img className='feedback-bg2' src="../../../public/bg_triangle5.webp" alt="" />
 		</div>
 		</>
 	)

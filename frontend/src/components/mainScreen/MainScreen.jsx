@@ -35,12 +35,12 @@ const MainScreen = () => {
 				<div className="entry__subtitle">
 					<p>Мы предлагаем комплексные логистические решения для оптимизации <br /> ваших международных перевозок.</p>
 					<p>С нами международная логистика легко, таможенное <br /> оформление с удовольствием, сертификация просто <br /> Забрось свой запрос в <span>Вортекс.</span></p>
-					<img src="../../../public/container.png" alt="" />
+					<img src="../../../public/container.webp" alt="" />
 				</div>
 			</div>
-			<img className='main-bg1' src="../../../public/bg_triangle1.png" alt="" />
-			<img className='main-bg2' src="../../../public/bg_triangle2.png" alt="" />
-			<img className='main-bg3' src="../../../public/bg_triangle3.png" alt="" />
+			<img className='main-bg1' src="../../../public/bg_triangle1.webp" alt="" />
+			<img className='main-bg2' src="../../../public/bg_triangle2.webp" alt="" />
+			<img className='main-bg3' src="../../../public/bg_triangle3.webp" alt="" />
 		</div>
 	)
 }
