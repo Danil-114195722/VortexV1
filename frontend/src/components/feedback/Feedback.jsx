@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
 const Feedback = () => {
 	const [isAccess, setIsAccess] = useState(false)
+	const [isLoading, setIsLoading] = useState(false)
 
 	document.addEventListener('click', e => {
 		if (e.target instanceof HTMLElement && !e.target?.closest('.modal')) {
@@ -36,6 +37,7 @@ const Feedback = () => {
 	}
 
 	const a  = e => {
+		setIsLoading(true)
 		const formData = {
 			name: e.target.name.value,
 			phone: e.target.phone.value,
@@ -53,10 +55,12 @@ const Feedback = () => {
 		axios.post('http://api.vortex.spb.su/send_mail/', formData)
 		.then(() => {
 			setIsAccess(true)
+			setIsLoading(false)
 		})
 		.catch(error => {
 			console.error('Ошибка при отправке запроса', error)
 			alert('Ошибка при отправке запроса, попробуйте отправить заявку позже или свяжитесь с нами напрямую')
+			setIsLoading(false)
 		})
 
 		e.target[0].value = ''
@@ -73,6 +77,11 @@ const Feedback = () => {
 			<Modal setIsAccess={setIsAccess}/>
 			<GlobalStyles />
 			</>
+		)}
+		{isLoading && (
+			<div className="mask">
+				<div className="loader"></div>
+			</div>
 		)}
 		<div className="feedback element-animation" id='feedback'>
 			<h2 className="feedback-title">Обратная <span>свзяь</span></h2>
