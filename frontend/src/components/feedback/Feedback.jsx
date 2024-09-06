@@ -5,15 +5,21 @@ import { createGlobalStyle } from 'styled-components'
 import axios from 'axios'
 
 const GlobalStyles = createGlobalStyle`
-		body, html{
-			overflow: hidden;
-		}
-		#main, #directions, #services, #advantages, #feedback, footer {
-			opacity: 0.2;
-			transition: opacity 0.3s ease-out; 
-			cursor: pointer;
-			}	
-		`
+	body, html{
+		overflow: hidden;
+	}
+	#main, #directions, #services, #advantages, #feedback, footer {
+		opacity: 0.2;
+		transition: opacity 0.3s ease-out; 
+		cursor: pointer;
+	}	
+`
+
+const Loading = createGlobalStyle`
+	body, html{
+		overflow: hidden;
+	}
+`
 
 const Feedback = () => {
 	const [isAccess, setIsAccess] = useState(false)
@@ -79,9 +85,12 @@ const Feedback = () => {
 			</>
 		)}
 		{isLoading && (
+			<>
 			<div className="mask">
 				<div className="loader"></div>
 			</div>
+			<Loading />
+			</>
 		)}
 		<div className="feedback element-animation" id='feedback'>
 			<h2 className="feedback-title">Обратная <span>свзяь</span></h2>
