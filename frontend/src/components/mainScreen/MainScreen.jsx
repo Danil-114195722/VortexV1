@@ -25,7 +25,6 @@ const MainScreen = () => {
 							<a href="#directions"><li className='menu-item'>Направления</li></a>
 							<a href="#advantages"><li className='menu-item'>Преимущества</li></a>
 							<a href="#feedback"><li className='menu-item'>Обратная связь</li></a>
-							<a href="tel:+79219256513" ><li className='menu-item last-menu-item'>+7 921 925 65 13</li></a>
 						</ul>
 					</div>
 				</div>

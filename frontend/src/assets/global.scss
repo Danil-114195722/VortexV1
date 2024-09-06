@@ -92,21 +92,21 @@ h4{
 	font-weight: 550;
 }
 h5{
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'Inter', sans-serif;
 	cursor: pointer;
 	color: black;
 	font-weight: 400;
 }
 p, a{
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 	color: #696969;
 	text-decoration: none;
 }
 .menu-list a{
 	color: black;
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 500;
 }
 span{
@@ -118,7 +118,7 @@ input[type='button'], input[type='submit']{
 	background-color: #005DFF;
 	border-radius: 15px;
 	font-family: 'Inter', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	color: white;
 	border: none;
 	font-weight: 300;
@@ -137,7 +137,8 @@ input[type='text'], input[type='number'], input[type='email']{
 	border-radius: 0;
 	padding-bottom: 5px;
 	font-family: 'Raleway', sans-serif;
-	font-size: 13px;
+	font-size: 15px;
+	height: 18px;
 	outline: none;
 	background-color: transparent;
 }
@@ -145,7 +146,7 @@ input[type='text']::placeholder{
 	color: #696969;
 }
 select{
-	font-size: 13px;
+	font-size: 15px;
 	border-radius: 15px;
 	height: 40px;
 	text-align: center;
@@ -165,7 +166,7 @@ textarea{
 	border: 1px solid #696969;
 	color: #000000;
 	background-color: white;
-	font-size: 13px;
+	font-size: 15px;
 	font-family: 'Raleway', sans-serif;
 	outline: none;
 }
@@ -214,7 +215,7 @@ textarea{
 		}
 	}
 }
-@media (max-width: 1060px) {
+@media (max-width: 1100px) {
 	.main .header__left .header__nav, .main .header__right h5, .main .header__right input{
 		display: none;
 	}
