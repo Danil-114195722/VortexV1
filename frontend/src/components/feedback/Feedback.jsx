@@ -58,7 +58,7 @@ const Feedback = () => {
 				}
 		})
 
-		axios.post('http://api.vortex.spb.su/send_mail/', formData)
+		axios.post('https://api.vortex.spb.su/send_mail/', formData)
 		.then(() => {
 			setIsAccess(true)
 			setIsLoading(false)
