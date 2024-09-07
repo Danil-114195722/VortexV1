@@ -93,7 +93,7 @@ const Feedback = () => {
 			</>
 		)}
 		<div className="feedback element-animation" id='feedback'>
-			<h2 className="feedback-title">Остваьте вашу <span>заявку</span></h2>
+			<h2 className="feedback-title">Оставьте вашу <span>заявку</span></h2>
 			<div className="feedback__window scale-anim">
 				<form action="" onSubmit={(e) => phoneValidate(e)}>
 					<input name='name' type="text" placeholder='Ваше имя' required/>
