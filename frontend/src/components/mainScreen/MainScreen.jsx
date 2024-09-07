@@ -10,7 +10,7 @@ const MainScreen = () => {
 						<a href='#services' className='link'>Услуги</a>
 						<a href='#directions' className='link'>Направления</a>
 						<a href='#advantages' className='link'>Преимущества</a>
-						<a href='#feedback' className='link'>Обратная связь</a>
+						<a href='#feedback' className='link'>Оставить заявку</a>
 					</div>
 				</div>
 				<div className="header__right">
@@ -33,7 +33,7 @@ const MainScreen = () => {
 				<h1 className='entry__title'>Международная <br /> <span>логистика</span></h1>
 				<div className="entry__subtitle">
 					<p>Мы предлагаем комплексные логистические решения для оптимизации <br /> ваших международных перевозок.</p>
-					<p>С нами международная логистика легко, таможенное <br /> оформление с удовольствием, сертификация просто <br /> Забрось свой запрос в <span>Вортекс.</span></p>
+					<p>С нами международная логистика легко, таможенное <br /> оформление с удовольствием, сертификация просто, <br /> Направьте свой запрос в <a href="#feedback"><span className='link'>Вортекс.</span></a></p>
 					<img src="../../../public/container.webp" alt="" />
 				</div>
 			</div>
