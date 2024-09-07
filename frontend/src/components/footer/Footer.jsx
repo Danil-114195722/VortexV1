@@ -14,6 +14,7 @@ const Footer = () => {
 			</div>
 			<div className="footer__right">
 				<div className="footer__contacts">
+					<p>info@vortex.spb.su</p>
 					<p>manager@vortex.spb.su</p>
 					<p>logist@vortex.spb.su</p>
 				</div>

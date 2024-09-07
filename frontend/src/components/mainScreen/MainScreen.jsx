@@ -24,7 +24,7 @@ const MainScreen = () => {
 							<a href="#services"><li className='menu-item'>Услуги</li></a>
 							<a href="#directions"><li className='menu-item'>Направления</li></a>
 							<a href="#advantages"><li className='menu-item'>Преимущества</li></a>
-							<a href="#feedback"><li className='menu-item'>Обратная связь</li></a>
+							<a href="#feedback"><li className='menu-item'>Оставить заявку</li></a>
 						</ul>
 					</div>
 				</div>
