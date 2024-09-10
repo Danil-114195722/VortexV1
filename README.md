@@ -25,3 +25,7 @@ MAIL_PASSWORD = 'password_for_email_from'
 # activate venv
 source venv/bin/activate
 ```
+
+
+### Important notes:
+1) On hosting front send request to `https://api.vortex.spb.su/wsgi.py/send_mail/`
