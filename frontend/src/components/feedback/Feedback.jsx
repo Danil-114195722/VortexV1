@@ -58,7 +58,7 @@ const Feedback = () => {
 				}
 		})
 
-		axios.post('http://api.vortex.spb.su/send_mail/', formData)
+		axios.post('https://api.vortex.spb.su/send_mail/', formData)
 		.then(() => {
 			setIsAccess(true)
 			setIsLoading(false)
@@ -93,7 +93,7 @@ const Feedback = () => {
 			</>
 		)}
 		<div className="feedback element-animation" id='feedback'>
-			<h2 className="feedback-title">Обратная <span>свзяь</span></h2>
+			<h2 className="feedback-title">Оставьте вашу <span>заявку</span></h2>
 			<div className="feedback__window scale-anim">
 				<form action="" onSubmit={(e) => phoneValidate(e)}>
 					<input name='name' type="text" placeholder='Ваше имя' required/>

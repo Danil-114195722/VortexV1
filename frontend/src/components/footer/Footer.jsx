@@ -9,11 +9,12 @@ const Footer = () => {
 					<a href='#services' className='link'>Услуги</a>
 					<a href='#directions' className='link'>Направления</a>
 					<a href='#advantages' className='link'>Преимущества</a>
-					<a href='#feedback' className='link'>Обратная связь</a>
+					<a href='#feedback' className='link'>Оставить заявку</a>
 				</nav>
 			</div>
 			<div className="footer__right">
 				<div className="footer__contacts">
+					<p>info@vortex.spb.su</p>
 					<p>manager@vortex.spb.su</p>
 					<p>logist@vortex.spb.su</p>
 				</div>
