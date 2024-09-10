@@ -2,8 +2,15 @@ import ssl
 import smtplib
 import aiosmtplib
 
+import codecs
+
 from settings.settings import logger
-from settings.config import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST
+# from settings.config import MAIL_PASSWORD, MAIL_FROM, MAIL_TO_LIST
+
+
+MAIL_FROM = 'ejyou.user@gmail.com'
+MAIL_PASSWORD = 'dpyssmcsagmptxzj'
+MAIL_TO_LIST = ['ejyou.user@gmail.com', 'info@vortex.spb.su']
 
 
 # Асинхронная отправка письма через google
@@ -47,7 +54,8 @@ def send_mail_google(subject: str, text: str) -> bool:
                            f"{text}"))
 
     logger.info("Start send mail...")
-    mail_body = mail_body.encode()  # для русских букв
+    mail_body = mail_body.encode()  # перекодировка в utf-8 (для кириллицы)
+    # mail_body = mail_body.encode("koi8_r")  # перекодировка в koi-8 (для кириллицы)
 
     server = smtplib.SMTP_SSL(host='smtp.gmail.com', port=465, timeout=5.0)
     try:
@@ -104,10 +112,10 @@ async def async_send_mail_vortex(subject: str, text: str) -> bool:
 
 
 # if __name__ == '__main__':
-#     import asyncio
+#     # import asyncio
 #
-#     mail_subject = "Проверка API!!!"
+#     mail_subject = "Check API!!!"
 #     mail_text = f'''Здесь должен быть длинный текст с результатом формы с сайта'''
 #
-#     send_mail(subject=mail_subject, text=mail_text)
-#     asyncio.run(async_send_mail(subject=mail_subject, text=mail_text))
+#     send_mail_google(subject=mail_subject, text=mail_text)
+#     # asyncio.run(async_send_mail_google(subject=mail_subject, text=mail_text))
