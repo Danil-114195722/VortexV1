@@ -73,7 +73,8 @@ async def async_send_mail_vortex(subject: str, text: str) -> bool:
                            f"{text}"))
 
     logger.info("Start send mail...")
-    mail_body = mail_body.encode()  # для русских букв
+    # mail_body = mail_body.encode()  # перекодировка в utf-8 (для кириллицы)
+    mail_body = mail_body.encode("koi8_r")  # перекодировка в koi-8 (для кириллицы)
 
     ctx = ssl.create_default_context()
     ctx.set_ciphers('DEFAULT')
